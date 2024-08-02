@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mathematical Reference</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.css">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+  </style>
+</head>
+<body>
+  <div class="header">
+    <select id="subjectSelect">
+      <option value="algebra">Algebra</option>
+      <option value="trigonometry" selected>Trigonometry</option>
+    </select>
+    <div class="logo">Mathematical Reference</div>
+    <div class="nav-toggle">
+      <div class="logo">&nbsp;</div>
+    </div>
+  </div>
+
+  <div class="container">
+    <h1>Mathematical Reference</h1>
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Enter the operator name...">
+      <input type="submit" id="searchButton" value="Search">
+    </div>
+    <div class="results" id="results"></div>
+  </div>
+
+  <div class="main-section">
+    <div class="equation-container">
+      <div class="equation-header">Sum of Sines</div>
+      <p class="equation-description">The formula for the sum of sines is:</p>
+      <div class="formula">sin(a + b) = sin(a) * cos(b) + cos(a) * sin(b)</div>
+      <div class="user-input-block">
+        <div class="input-block">
+          <label for="angle_sin_sum_a">a:</label>
+          <input type="text" id="angle_sin_sum_a">
+        </div>
+        <div class="input-block">
+          <label for="angle_sin_sum_b">b:</label>
+          <input type="text" id="angle_sin_sum_b">
+        </div>
+        <button class="equation-button" onclick="calculateSinSum()">Calculate</button>
+      </div>
+    
+      <div id="result-sin-sum"></div>
+    
+      <div class="tooltip">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Info_Simple_bw.svg/512px-Info_Simple_bw.svg.png?20150409153400" alt="Info Icon">
+        <span class="tooltiptext">Just enter the values for a and b to find sin(a + b).</span>
+      </div>
+    </div>
+    
+    <div class="equation-container">
+      <div class="equation-header">Sum of Cosines</div>
+      <p class="equation-description">The formula for the sum of cosines is:</p>
+      <div class="formula">cos(a + b) = cos(a) * cos(b) - sin(a) * sin(b)</div>
+      <div class="user-input-block">
+        <div class="input-block">
+          <label for="angle_cos_sum_a">a:</label>
+          <input type="text" id="angle_cos_sum_a">
+        </div>
+        <div class="input-block">
+          <label for="angle_cos_sum_b">b:</label>
+          <input type="text" id="angle_cos_sum_b">
+        </div>
+        <button class="equation-button" onclick="calculateCosSum()">Calculate</button>
+      </div>
+    
+      <div id="result-cos-sum"></div>
+    
+      <div class="tooltip">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Info_Simple_bw.svg/512px-Info_Simple_bw.svg.png?20150409153400" alt="Info Icon">
+        <span class="tooltiptext">Just enter the values for a and b to find cos(a + b).</span>
+      </div>
+    </div>
+    
+
+    <div class="equation-container">
+      <div class="equation-header">Double Angle for Sine</div>
+      <p class="equation-description">The formula for the double angle of sine is:</p>
+      <div class="formula">sin(2a) = 2 * sin(a) * cos(a)</div>
+      <div class="user-input-block">
+        <div class="input-block">
+          <label for="angle_double_sin_a">a:</label>
+          <input type="text" id="angle_double_sin_a">
+        </div>
+        <button class="equation-button" onclick="calculateSinDoubleAngle()">Calculate</button>
+      </div>
+
+      <div id="result-sin-double-angle"></div>
+
+      <div class="tooltip">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Info_Simple_bw.svg/512px-Info_Simple_bw.svg.png?20150409153400" alt="Info Icon">
+        <span class="tooltiptext">Just enter the value for a to find sin(2a).</span>
+      </div>
+    </div>
+
+    <div class="equation-container">
+      <div class="equation-header">Double Angle for Cosine</div>
+      <p class="equation-description">The formula for the double angle of cosine is:</p>
+      <div class="formula">cos(2a) = cos²(a) - sin²(a)</div>
+      <div class="user-input-block">
+        <div class="input-block">
+          <label for="angle_double_cos_a">a:</label>
+          <input type="text" id="angle_double_cos_a">
+        </div>
+        <button class="equation-button" onclick="calculateCosDoubleAngle()">Calculate</button>
+      </div>
+
+      <div id="result-cos-double-angle"></div>
+
+      <div class="tooltip">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Info_Simple_bw.svg/512px-Info_Simple_bw.svg.png?20150409153400" alt="Info Icon">
+        <span class="tooltiptext">Just enter the value for a to find cos(2a).</span>
+      </div>
+    </div>
+
+    <div class="equation-container">
+      <div class="equation-header">Cosine via Sine</div>
+      <p class="equation-description">The formula for cosine via sine is:</p>
+      <div class="formula">cos(2a) = 1 - 2 * sin²(a)</div>
+      <div class="user-input-block">
+        <div class="input-block">
+          <label for="angle_cos_via_sin_a">a:</label>
+          <input type="text" id="angle_cos_via_sin_a">
+        </div>
+        <button class="equation-button" onclick="calculateCosViaSin()">Calculate</button>
+      </div>
+
+      <div id="result-cos-via-sin"></div>
+
+      <div class="tooltip">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Info_Simple_bw.svg/512px-Info_Simple_bw.svg.png?20150409153400" alt="Info Icon">
+        <span class="tooltiptext">Just enter the value for a to find cos(2a).</span>
+      </div>
+    </div>
+  </div>
+
+  <script src="trigonometry.js"></script>
+</body>
+</html>

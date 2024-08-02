@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mathematical Reference</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="header">
+  <select id="subjectSelect">
+    <option value="algebra" selected>Algebra</option>
+    <option value="trigonometry">Trigonometry</option>
+  </select>
+  <div class="logo">Mathematical Reference</div>
+  <div class="nav-toggle">
+    <div class="logo">&nbsp;</div>
+  </div>
+</div>
+
+
+<div class="container">
+  <h1>Mathematical Reference</h1>
+  <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Enter the operator name...">
+      <input type="submit" id="searchButton" value="Search">
+  </div>
+  <div class="results" id="results"></div>
+</div>
+
+<div class="main-section">
+  <div class="equation-container">
+    <div class="equation-header">Linear Equation</div>
+    <p class="equation-description">A linear equation is an equation in which both sides define linear functions.</p>
+    <div class="formula">ax + b = 0</div>
+    <div class="user-input-block">
+      <div class="input-block">
+        <label for="equation1_a">a:</label>
+        <input type="text" id="equation1_a">
+      </div>
+      <div class="input-block">
+        <label for="equation1_b">b:</label>
+        <input type="text" id="equation1_b">
+      </div>
+      <button class="equation-button" onclick="solveLinearEquation()">Solve</button>
+    </div>
+
+    <div id="solved-equation"></div>
+
+    <div class="tooltip">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Info_Simple_bw.svg/512px-Info_Simple_bw.svg.png?20150409153400" alt="Info Icon">
+      <span class="tooltiptext">Just move b to the right and then divide by a to find x</span>
+    </div>
+  </div>
+
+
+  <div class="equation-container">
+    <div class="equation-header">Square of a Sum</div>
+    <p class="equation-description">The square of a sum is a type of algebraic equation where the sum of two expressions is squared.</p>
+    <div class="formula">(a + b)^2 = a^2 + 2ab + b^2</div>
+    <div class="user-input-block">
+      <div class="input-block">
+        <label for="equation2_a">a:</label>
+        <input type="text" id="equation2_a">
+      </div>
+      <div class="input-block">
+        <label for="equation2_b">b:</label>
+        <input type="text" id="equation2_b">
+      </div>
+      <button class="equation-button" onclick="expandSquareOfSum()">Expand</button>
+    </div>
+
+    <div id="solved-equation2"></div>
+
+    <div class="tooltip">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Info_Simple_bw.svg/512px-Info_Simple_bw.svg.png?20150409153400" alt="Info Icon">
+      <span class="tooltiptext">Expand the expression using the formula (a + b)^2 = a^2 + 2ab + b^2</span>
+    </div>
+  </div>
+
+  <div class="equation-container">
+    <div class="equation-header">Cube of a Sum</div>
+    <p class="equation-description">The cube of a sum is a type of algebraic equation where the sum of two expressions is cubed.</p>
+    <div class="formula">(a + b)^3 = a^3 + 3a^2b + 3ab^2 + b^3</div>
+    <div class="user-input-block">
+      <div class="input-block">
+        <label for="equation3_a">a:</label>
+        <input type="text" id="equation3_a">
+      </div>
+      <div class="input-block">
+        <label for="equation3_b">b:</label>
+        <input type="text" id="equation3_b">
+      </div>
+      <button class="equation-button" onclick="expandCubeOfSum()">Expand</button>
+    </div>
+
+    <div id="solved-equation3"></div>
+
+    <div class="tooltip">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Info_Simple_bw.svg/512px-Info_Simple_bw.svg.png?20150409153400" alt="Info Icon">
+      <span class="tooltiptext">Expand the expression using the formula (a + b)^3 = a^3 + 3a^2b + 3ab^2 + b^3</span>
+    </div>
+  </div>
+
+  <div class="equation-container">
+    <div class="equation-header">Sum of an Arithmetic Progression</div>
+    <p class="equation-description">The sum of an arithmetic progression is the sum of all terms in the arithmetic sequence.</p>
+    <div class="formula">S = n/2 * (a + l)</div>
+    <div class="user-input-block">
+      <div class="input-block">
+        <label for="arithmetic_progression_n">n:</label>
+        <input type="text" id="arithmetic_progression_n">
+      </div>
+      <div class="input-block">
+        <label for="arithmetic_progression_a">a:</label>
+        <input type="text" id="arithmetic_progression_a">
+      </div>
+      <div class="input-block">
+        <label for="arithmetic_progression_d">d:</label>
+        <input type="text" id="arithmetic_progression_d">
+      </div>
+      <button class="equation-button" onclick="calculateArithmeticProgressionSum()">Calculate</button>
+    </div>
+
+    <div id="solved-arithmetic-progresssion"></div>
+
+    <div class="tooltip">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Info_Simple_bw.svg/512px-Info_Simple_bw.svg.png?20150409153400" alt="Info Icon">
+      <span class="tooltiptext">Use the formula S = n/2 * (a + l), where l is the last term of the sequence.</span>
+    </div>
+  </div>
+
+  <div class="equation-container">
+    <div class="equation-header">Discriminant of a Quadratic Equation</div>
+    <p class="equation-description">The discriminant of a quadratic equation is a number that determines the number of solutions of the quadratic equation.</p>
+    <div class="formula">D = b^2 - 4ac</div>
+    <div class="user-input-block">
+      <div class="input-block">
+        <label for="quadratic_equation_a">a:</label>
+        <input type="text" id="quadratic_equation_a">
+      </div>
+      <div class="input-block">
+        <label for="quadratic_equation_b">b:</label>
+        <input type="text" id="quadratic_equation_b">
+      </div>
+      <div class="input-block">
+        <label for="quadratic_equation_c">c:</label>
+        <input type="text" id="quadratic_equation_c">
+      </div>
+      <button class="equation-button" onclick="calculateQuadraticEquationDiscriminant()">Calculate</button>
+    </div>
+
+    <div id="solved-quadratic-equation"></div>
+
+    <div class="tooltip">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Info_Simple_bw.svg/512px-Info_Simple_bw.svg.png?20150409153400" alt="Info Icon">
+      <span class="tooltiptext">Use the formula D = b^2 - 4ac to calculate the discriminant.</span>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+
+<script src="algebra.js"></script>
+</body>
+</html>

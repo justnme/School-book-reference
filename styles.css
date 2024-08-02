@@ -1,0 +1,231 @@
+body { 
+    font-family: Arial, sans-serif; 
+    margin: 0;
+    padding: 0; 
+    background-color: #f5f5f5;
+    color: #333;
+  }
+  
+  .header { 
+    display: flex; 
+    justify-content: space-around; 
+    align-items: center; 
+    padding: 20px; 
+    background-color: #eee; 
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1); 
+  }
+  
+  .header .logo { 
+    font-size: 24px; 
+    font-weight: bold; 
+  }
+  
+  .header select { 
+    padding: 10px; 
+    border: none; 
+    border-radius: 5px; 
+    background-color: #ddd;
+    color: #333;
+  } 
+  
+  .nav-toggle { 
+    cursor: pointer; 
+  }
+  
+  #menu { 
+    display: none; 
+    width: 400px; 
+    height: 400px; 
+    background-color: #ddd;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1); 
+  } 
+  
+  .container { 
+    max-width: 700px; 
+    margin: auto; 
+    padding: 20px; 
+  }
+  
+  .search-box { 
+    margin-bottom: 20px;   
+    display: flex; 
+  }
+  
+  .search-box input[type="text"] { 
+    width: 80%; 
+    padding: 10px;  
+    box-sizing: border-box; 
+    border-radius: 5px; 
+    background-color: #ddd;
+    color: #333;
+  } 
+  
+  .search-box input[type="submit"] {
+    padding: 10px;  
+    border-radius: 5px; 
+    background-color: #ddd;
+    color: #333;
+    transition: opacity 0.3s; 
+  }
+  
+  .search-box input[type="submit"]:hover {
+    opacity: 0.7; 
+  }
+  
+  .results { 
+    margin-top: 20px; 
+  }
+  
+  .math-operator { 
+    margin-bottom: 10px; 
+  }
+  
+  h1 { 
+    text-align: center;
+  }
+  
+
+  .main-section {
+    max-width: 70%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .equation-container {
+    max-width: calc(45%  - 30px);
+    margin-bottom: 30px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    background-color: #eee;
+    flex: 0 0 calc(50% - 30px);
+    margin: 15px;
+    display: block;
+  }
+  .equation-header {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .equation-desc{
+    margin-top: 5px;
+    margin-bottom: 15px;
+  }
+  
+  .user-input-block {
+    margin-top: 15px;
+  }
+  
+  .input-block{
+    display: block;
+    margin: 5px;
+  }
+  
+  .equation-button {
+    padding: 10px 20px;
+    background-color: #008CBA; 
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    position: relative;
+    display: block;
+    margin: auto auto 7px auto;
+    font-size: 16px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .equation-button:hover {
+    background-color: white; 
+    color: black; 
+  }
+  
+  .tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 180px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 7px ;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    margin-left: -90px;
+    left: 50%;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .tooltip img {
+    width: 32px;
+    height: 32px;
+  }
+  
+
+  #solved-equation{
+    margin-top: 10px;
+  }
+  @media (max-width: 600px) {
+    .main-section {
+        max-width: 100%;
+      width: 100%;
+    }
+  
+    .header {
+      justify-content: space-between;
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+  
+    #menu {
+      width: 100%;
+    }
+  
+    .search-box {
+      flex-direction: column;
+    }
+  
+    .search-box input[type="text"] {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  
+    .equation-container {
+        max-width: 80%;
+      width: 100%;
+      margin-right: 0;
+      flex: auto;
+    }
+  
+    .equation-button {
+      width: 100%;
+    }
+    .tooltip img {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+      .tooltip{
+        display: block;
+      }
+  }
+  
